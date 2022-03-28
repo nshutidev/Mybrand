@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <title>LOGIN</title>
+  </head>
+  <body class="login">
+    <form action="dashboard.html"  class="login-page">
+      <h1 class="title-login">LOGIN</h1>
+      <div class="field email">
+      <input class="theinput" type="text" placeholder="Please enter your email" />
+      <div class="error error-txt">Email can't be blank</div>
+    </div>
+    <div class="field password">
+      <input class="theinput" type="password" placeholder="Please enter your password"/>
+      <div class="error error-txt">Password can't be blank</div>
+    </div>
+     <input class="loginbtn" type="submit" value="LOGIN">
+    
+      <ul class="social-login">
+        <li class="each-social">
+          <a href="#" onclick="oAuth2Login('google')"
+            ><i class="fa fa-google" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li class="each-social">
+          <a href="#" onclick="oAuth2Login('github')"
+            ><i class="fa fa-github" aria-hidden="true"></i
+          ></a>
+        </li>
+        <li class="each-social">
+          <a href="#" onclick="oAuth2Login('fb')"
+            ><i class="fa fa-facebook" aria-hidden="true"></i
+          ></a>
+        </li>
+      </ul>
+    </form>
+   <!-- <script src="/validation.js"></script> -->
+  </body>
+</html>

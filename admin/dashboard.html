@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="links">
+        <h1 class="title">nshuti<span>Dev</span></h1>
+        <ul class="nav-links">
+          <li class="nav-link"><a href="" class="active">Dashboard</a></li>
+          <li class="nav-link"><a href="./newPost.html">New Post</a></li>
+          <li class="nav-link"><a href="./queries.html">Queries</a></li>
+          <li class="nav-link profile-wrapper">
+            <a href="#">
+              <img src="/UI/images/my-pic.png" class="avatar" alt="profile" />
+            </a>
+            <div class="dd-menu">
+              <p class="dd-link"><a href="./editProfile.html">Profile</a></p>
+              <p class="dd-link"><a href="" class="logout">Logout</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    
+    <div class="dashboard">
+      <!-- <h2 class="dash-title"> Welcome Admin!</h2> -->
+    <div class="blog-posts-container">
+
+       <div class="each-post">
+        <div class="post-img">
+          <img class="dashboard-img" src="../images/education.jfif" alt="blog" />
+        </div>
+        <h2>
+          <div class="sub-title-post">Education</div> 
+
+        </h2>
+        <h3 class="post-title">
+          Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, habits, and personal development. 
+        </h3>
+        <p class="time"><em> 2 days ago</em></p>
+
+        <div class="bottom-icons">
+          <p class="each-icon">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i
+            ><span class="right">5</span>
+          </p>
+          <p class="each-icon">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <span class="right">15</span>
+          </p>
+          <p class="each-icon">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <span class="right">10</span>
+          </p>
+        </div>
+        <div class="post-options">
+          <a href="/admin/editPost.html">
+            <button class="edit">Edit</button>
+          </a>
+          <button class="delete">Delete</button>
+        </div>
+      </div> 
+      
+    </div>
+    <div class="blog-posts-container">
+
+      <div class="each-post">
+       <div class="post-img">
+         <img class="dashboard-img" src="../images/top10.jfif" alt="blog" />
+       </div>
+       <h2>
+        <div class="sub-title-post">Top 10 Tech</div>  
+       </h2>
+
+       <h3 class="post-title">
+        Full Stack Development, Blockchain, Snowflake, Edge Computing, Internet 
+        of Behaviors,...
+      </h3>
+       <p class="time"><em> 2 days ago</em></p>
+
+       <div class="bottom-icons">
+         <p class="each-icon">
+           <i class="fa fa-commenting-o" aria-hidden="true"></i
+           ><span class="right">5</span>
+         </p>
+         <p class="each-icon">
+           <i class="fa fa-eye" aria-hidden="true"></i>
+           <span class="right">15</span>
+         </p>
+         <p class="each-icon">
+           <i class="fa fa-heart" aria-hidden="true"></i>
+           <span class="right">10</span>
+         </p>
+       </div>
+       <div class="post-options">
+        <a href="/admin/editPost.html">
+          <button class="edit">Edit</button>
+        </a>
+         <button class="delete">Delete</button>
+       </div>
+     </div> 
+     
+    </div>
+   <div class="blog-posts-container">
+
+    <div class="each-post">
+     <div class="post-img">
+       <img class="dashboard-img" src="../images/gosple.jfif" alt="blog" />
+     </div>
+     <h2>
+      <div class="sub-title-post">Televangelism</div>  
+
+     </h2>
+
+     <h3 class="post-title">
+      Televangelism is the use of media, 
+      specifically radio and television, 
+      to communicate Christianity
+    </h3>
+     <p class="time"><em> 2 days ago</em></p>
+
+     <div class="bottom-icons">
+       <p class="each-icon">
+         <i class="fa fa-commenting-o" aria-hidden="true"></i
+         ><span class="right">5</span>
+       </p>
+       <p class="each-icon">
+         <i class="fa fa-eye" aria-hidden="true"></i>
+         <span class="right">15</span>
+       </p>
+       <p class="each-icon">
+         <i class="fa fa-heart" aria-hidden="true"></i>
+         <span class="right">10</span>
+       </p>
+     </div>
+     <div class="post-options">
+      <a href="/admin/editPost.html">
+        <button class="edit">Edit</button>
+      </a>
+       <button class="delete">Delete</button>
+     </div>
+   </div> 
+   
+  </div>
+  </div>
+    <script src="../js/app.js"></script>
+
+    
+  </body>
+</html>
