@@ -136,30 +136,53 @@
       </div>
   </section>
     <section class="contact-page" id="contacts">
-      <div class="upper-bg"></div>
-      <div class="bottom-bg"></div>
-      <form class="contact-form" method="POST">
-        <h2 class="title-main">CONTACT ME</h2>
-        <div class="success"></div>
-        <input
-          type="text"
-          name="name"
-          class="name"
-          placeholder="Please Enter your Name..."
-        />
-        <input
-          type="text"
-          class="email"
-          name="email"
-          placeholder="Please Enter your Email..."
-        />
-        <textarea name="message" placeholder="Your Valuable Message"></textarea>
-        <button class="submit" type="submit">Submit</button>
-        <p class="invalidMsg"></p>
-      </form>
+       <div style="max-width:500px;padding:30px">
+        <div id="fcf-form">
+          <div class="upper-bg"></div>
+          <div class="bottom-bg"></div>
+            <form class="fcf-form-class" id="freeversion" method="post" action="#">
+              
+              <h3 class="title-main">CONTACT ME</h3>
+                <div class="field">
+                    <label for="Name" class="label has-text-weight-normal"></label>
+                    <div class="control">
+                        <input type="text" name="Name" id="Name" class="input-is-full-width" maxlength="100"
+                            data-validate-field="Name" placeholder="Please Enter your name ">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Email" class="label has-text-weight-normal"></label>
+                    <div class="control">
+                        <input type="email" name="Email" id="Email" class="input-is-full-width" maxlength="100"
+                            data-validate-field="Email" placeholder="Please Enter your email">
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="Message" class="label has-text-weight-normal"></label>
+                    <div class="control">
+                        <textarea placeholder="Your valuable message" name="Message" id="Message" class="textarea" maxlength="3000" rows="5" 
+                        data-validate-field="Message" ></textarea>
+                    </div>
+                </div>
+                <div id="fcf-status" class="fcf-status"></div>
+                <div class="field">
+                    <div class="buttons">
+                        <button id="fcf-button" type="submit" class="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="fcf-thank-you" style="display:none">
+            <!-- Thank you message goes below -->
+            <strong>Thank you</strong>
+            <p>Thanks for contacting us, we will get back in touch with you soon.</p>
+            <!-- Thank you message goes above -->
+        </div>
+    </div>
+
     </section> 
     <section>
-      <footer class = "footer">
+       <footer class = "footer"> 
         <div class="container">
             <div class="row">
                 <div class="footer-col">
@@ -185,8 +208,10 @@
             
             </div>
         </div>
-    </footer>
+    </footer> -->
     <script src="/app.js"></script>
-
+    <script src="fcf.just-validate.min.js"></script>
+    <script src="fcf.form.js"></script>
+    <script src="/localStorage.js"></script>
   </body>
 </html>

@@ -7,23 +7,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
     <title>LOGIN</title>
   </head>
   <body class="login">
-    <form action="dashboard.html"  class="login-page">
-      <h1 class="title-login">LOGIN</h1>
-      <div class="field email">
-      <input class="theinput" type="text" placeholder="Please enter your email" />
-      <div class="error error-txt">Email can't be blank</div>
-    </div>
-    <div class="field password">
-      <input class="theinput" type="password" placeholder="Please enter your password"/>
-      <div class="error error-txt">Password can't be blank</div>
-    </div>
-     <input class="loginbtn" type="submit" value="LOGIN">
-    
+    <form class="login-page" id="loginForm" action="dashboard.html" method="post" name="form" onsubmit="return validated()">
+
+	<div class="container">
+    <h1 class="title-login">LOGIN</h1>
+			<div class="font"></div>
+			<input autocomplete="off" type="text" name="email" id="email1" placeholder="Please enter your email" class="theinput">
+			<div id="email_error">Please fill up your Email or Phone</div>
+			<div class="font font2"></div>
+			<input type="password" name="password" id="password1" placeholder="Please enter your password" class="theinput"> 
+			<div id="pass_error">Please fill up your Password</div>
+			<button class="loginbtn" type="submit">Login</button>
+
       <ul class="social-login">
         <li class="each-social">
           <a href="#" onclick="oAuth2Login('google')"
@@ -41,7 +41,30 @@
           ></a>
         </li>
       </ul>
-    </form>
-   <!-- <script src="/validation.js"></script> -->
+		</form>
+	</div>	  
+  <script src="/login.js"></script>
+   <script>
+    document.getElementById("loginForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("email1").value;
+      const password = document.getElementById("password2").value;
+
+      const users = JSON.parse(localStorage.getItem("users")) || [];
+      const user = users.filter(
+        (item) => item.email == email && item.password == password
+      );
+      if (user.length > 0) {
+        localStorage.setItem("loginedUser", JSON.stringify(user[0]));
+        if (user[0].role == "admin") {
+          location.href = "";
+        } else {
+          location.href = "";
+        }
+      } else alert("wrong password or email");
+      // console.log(user[0].role);
+    }); 
+  </script>
   </body>
 </html>
